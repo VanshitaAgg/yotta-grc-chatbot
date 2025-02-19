@@ -1,0 +1,8 @@
+chainlit
+langchain
+chromadb
+requests
+openai
+pandas
+numpy
+python-dotenv
