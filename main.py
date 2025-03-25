@@ -35,7 +35,7 @@ def run_flow(message: str, history: list) -> str:
     }
 
     try:
-        response = requests.post(api_url, json=payload, headers=headers, timeout=30)
+        response = requests.post(api_url, json=payload, headers=headers, timeout=120)
 
         # Debugging Logs
         print(f"Status Code: {response.status_code}")
@@ -95,7 +95,7 @@ def main():
             st.write(bot_reply)
 
     # Clear Chat Button
-    if st.button("🗑️ Clear Chat"):
+    if st.button("🗑️Clear Chat"):
         st.session_state.chat_history = []
         st.rerun()
 
